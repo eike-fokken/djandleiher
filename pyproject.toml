@@ -1,0 +1,33 @@
+[project]
+name = "djandleiher"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Eike Fokken",email = "e.fokken+github@posteo.de"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django-ninja (>=1.5.0,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "djandleiher", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "django-stubs (>=5.2.7,<6.0.0)",
+    "black (>=25.11.0,<26.0.0)",
+    "isort (>=7.0.0,<8.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "importmagic (>=0.1.7,<0.2.0)",
+    "epc (>=0.0.5,<0.0.6)",
+    "mypy (>=1.19.0,<2.0.0)",
+    "python-lsp-server (>=1.13.2,<2.0.0)",
+    "pylsp-mypy (>=0.7.0,<0.8.0)",
+    "pytest (>=9.0.1,<10.0.0)"
+]
